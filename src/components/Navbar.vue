@@ -13,7 +13,7 @@ import CartIcon from './CartIcon.vue';
         <MenuIcon />
       </button>
   
-      <Logo />
+      <Logo class="mb-1" />
     </div>
 
     <div class="flex-center">
