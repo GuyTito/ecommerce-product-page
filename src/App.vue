@@ -1,5 +1,6 @@
 <script setup>
 import Navbar from './components/Navbar.vue';
+import Carousel from './components/Carousel.vue';
 
 
 </script>
@@ -8,11 +9,7 @@ import Navbar from './components/Navbar.vue';
   <Navbar />
 
   <main>
-    Collections
-    Men
-    Women
-    About
-    Contact
+    <Carousel />
 
     Sneaker Company
 
