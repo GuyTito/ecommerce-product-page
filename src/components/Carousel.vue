@@ -17,6 +17,7 @@ onMounted(() => {
 })
 const next = () => { flkty.next() }
 const previous = () => { flkty.previous() }
+setInterval(() => { next() }, 5000)
 
 </script>
 
