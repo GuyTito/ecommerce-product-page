@@ -3,7 +3,7 @@ import Navbar from './components/Navbar.vue';
 import Carousel from './components/Carousel.vue';
 import PlusIcon from './components/icons/PlusIcon.vue';
 import MinusIcon from './components/icons/MinusIcon.vue';
-import CartIcon from './components/CartIcon.vue';
+import CartIcon from './components/icons/CartIcon.vue';
 
 
 </script>
@@ -27,7 +27,7 @@ import CartIcon from './components/CartIcon.vue';
       <div class="flex items-center">
         <span class="Very-vark-blue font-bold text-2xl">$125.00</span>
 
-        <span class="text-Orange bg-Pale-orange py-1 px-2 text-xs font-bold ml-4 rounded-sm">50%</span>
+        <span class="text-Orange bg-Pale-orange py-1 px-2 text-xs font-bold ml-4 rounded-[5px]">50%</span>
 
         <span class="text-Grayish-blue line-through text-xs font-bold ml-auto">$250.00</span>
       </div>

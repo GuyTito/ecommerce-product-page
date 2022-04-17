@@ -1,10 +1,10 @@
 <script setup>
 import MenuIcon from './icons/MenuIcon.vue';
 import Logo from './Logo.vue';
-import CartIcon from './CartIcon.vue';
 
 import { ref, watchEffect } from 'vue';
 import CloseIcon from './icons/CloseIcon.vue';
+import CartIcon from './icons/CartIcon.vue';
 
 const menu = ['Collections', 'Men', 'Women', 'About', 'Contact']
 
