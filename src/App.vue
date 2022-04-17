@@ -44,8 +44,8 @@ import CartIcon from './components/icons/CartIcon.vue';
     </div>
   </main>
 
-  <footer>
-    footer
+  <footer class="mt-10 mb-2 text-center text-[10px] text-Dark-grayish-blue">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="underline hover:font-bold">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/GuyTito/ecommerce-product-page"  target="_blank" class="underline hover:font-bold">GuyTito</a>.
   </footer>
 </template>
-
