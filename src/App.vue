@@ -4,7 +4,17 @@ import Carousel from './components/Carousel.vue';
 import PlusIcon from './components/icons/PlusIcon.vue';
 import MinusIcon from './components/icons/MinusIcon.vue';
 import CartIcon from './components/icons/CartIcon.vue';
+import { ref } from 'vue';
+import { computed } from '@vue/reactivity';
 
+
+const quantity = ref(0)
+const c_quantity = computed(()=> {
+  if (quantity.value < 0) {
+    quantity.value = 0
+    return quantity.value
+  } else return quantity.value
+})
 
 </script>
 
@@ -33,11 +43,11 @@ import CartIcon from './components/icons/CartIcon.vue';
       </div>
   
       <div class="bg-Light-grayish-blue rounded-lg text-Orange font-bold py-3 px-4 flex justify-between">
-        <button> <MinusIcon /> </button>
+        <button @click="quantity--"> <MinusIcon /> </button>
 
-        <span class="text-Very-vark-blue">0</span>
+        <span class="text-Very-vark-blue"> {{ c_quantity }}</span>
 
-        <button> <PlusIcon /> </button>
+        <button @click="quantity++"> <PlusIcon /> </button>
       </div>
 
       <button class="bg-Orange text-white rounded-lg w-full py-3 px-4 flex justify-center"> <CartIcon class="fill-white mr-4" /> Add to cart</button>
