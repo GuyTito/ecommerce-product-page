@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from '@vue/reactivity';
+import { watchEffect } from 'vue';
 import { useCartStore } from '../stores/cart';
 import DeleteIcon from './icons/DeleteIcon.vue';
 
@@ -8,13 +9,21 @@ const total = computed(() => {
   return 125 * cart.item_quantity
 })
 
+watchEffect(()=> {
+  if (cart.is_open) {
+    document.body.style.overflow = 'hidden'
+    return
+  }
+  document.body.style.overflow = 'auto'
+})
+
 </script>
 
 
 <template>
   <Teleport to="body">
     <Transition>
-      <div v-if="cart.open_cart" @click="cart.open_cart = false" class="fixed inset-0 w-full h-full items-start">
+      <div v-if="cart.is_open" @click="cart.is_open = false" class="fixed inset-0 w-full h-full items-start">
         <div class="bg-white m-2 rounded-lg p-4 mt-16">
           <h2 class="text-Very-vark-blue font-bold">Cart</h2>
           
@@ -45,7 +54,7 @@ const total = computed(() => {
 </template>
 
 
-<style lang="postcss" scoped>
+<style scoped>
   .v-enter-active,
   .v-leave-active {
     transition: opacity 0.5s ease;
