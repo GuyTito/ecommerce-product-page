@@ -10,7 +10,6 @@ import { useCartStore } from '../stores/cart';
 const menu = ['Collections', 'Men', 'Women', 'About', 'Contact']
 
 const open = ref(false)
-
 watchEffect(()=> {
   if (open.value) {
     document.body.style.overflow = 'hidden'
@@ -35,7 +34,7 @@ const cart = useCartStore()
     </div>
 
     <div class="flex-center">
-      <button @click="cart.open_cart = true"><CartIcon /></button>
+      <button @click="cart.is_open = true"><CartIcon /></button>
       <img src="/assets/image-avatar.png" alt="avatar" class="h-5">
     </div>
   </header>

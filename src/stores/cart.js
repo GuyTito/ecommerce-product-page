@@ -4,7 +4,7 @@ export const useCartStore = defineStore({
   id: 'cart',
   state: () => ({
     item_quantity: 0,
-    open_cart: false,
+    is_open: false,
   }),
   getters: {
     // doubleCount: (state) => state.counter * 2
