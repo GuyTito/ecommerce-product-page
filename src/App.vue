@@ -6,6 +6,8 @@ import MinusIcon from './components/icons/MinusIcon.vue';
 import CartIcon from './components/icons/CartIcon.vue';
 import { ref } from 'vue';
 import { computed } from '@vue/reactivity';
+import { useCartStore } from './stores/cart'
+import Cart from './components/Cart.vue'
 
 
 const quantity = ref(0)
@@ -15,6 +17,12 @@ const c_quantity = computed(()=> {
     return quantity.value
   } else return quantity.value
 })
+
+const cart = useCartStore()
+const addToCart = () => {
+  cart.addItem(quantity.value)
+  quantity.value = 0
+}
 
 </script>
 
@@ -50,8 +58,12 @@ const c_quantity = computed(()=> {
         <button @click="quantity++"> <PlusIcon /> </button>
       </div>
 
-      <button class="bg-Orange text-white rounded-lg w-full py-3 px-4 flex justify-center"> <CartIcon class="fill-white mr-4" /> Add to cart</button>
+      <button @click="addToCart" class="orange-btn">
+        <CartIcon class="fill-white mr-4"/> Add to cart
+      </button>
     </div>
+
+    <Cart />
   </main>
 
   <footer class="mt-10 mb-2 text-center text-[10px] text-Dark-grayish-blue">
