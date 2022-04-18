@@ -37,12 +37,12 @@ watchEffect(()=> {
               <div> $125.00 * {{ cart.item_quantity }} <span class="font-bold text-Very-vark-blue">${{ total }}</span></div>
             </div>
   
-            <button class="ml-auto">
+            <button @click="cart.item_quantity = 0" class="ml-auto">
               <DeleteIcon />
             </button>
           </div>
   
-          <button v-if="cart.item_quantity" @click="cart.item_quantity = false" class="orange-btn mb-4">Checkout</button>
+          <button v-if="cart.item_quantity" @click="cart.item_quantity = 0" class="orange-btn mb-4">Checkout</button>
   
           <div v-else class="text-Dark-grayish-blue font-bold text-center my-16">
             Your cart is empty.
