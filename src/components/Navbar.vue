@@ -34,7 +34,11 @@ const cart = useCartStore()
     </div>
 
     <div class="flex-center">
-      <button @click="cart.is_open = true"><CartIcon /></button>
+      <button @click="cart.is_open = true" class="relative">
+        <CartIcon />
+        
+        <div v-if="cart.item_quantity" class="bg-Orange text-white absolute -top-2 -right-2 py-0 px-2 text-xs rounded-full">{{cart.item_quantity}}</div>
+      </button>
       <img src="/assets/image-avatar.png" alt="avatar" class="h-5">
     </div>
   </header>
