@@ -5,6 +5,7 @@ import Logo from './Logo.vue';
 import { ref, watchEffect } from 'vue';
 import CloseIcon from './icons/CloseIcon.vue';
 import CartIcon from './icons/CartIcon.vue';
+import { useCartStore } from '../stores/cart';
 
 const menu = ['Collections', 'Men', 'Women', 'About', 'Contact']
 
@@ -17,6 +18,8 @@ watchEffect(()=> {
   }
   document.body.style.overflow = 'auto'
 })
+
+const cart = useCartStore()
 
 </script>
 
@@ -32,7 +35,7 @@ watchEffect(()=> {
     </div>
 
     <div class="flex-center">
-      <CartIcon />
+      <button @click="cart.open_cart = true"><CartIcon /></button>
       <img src="/assets/image-avatar.png" alt="avatar" class="h-5">
     </div>
   </header>
