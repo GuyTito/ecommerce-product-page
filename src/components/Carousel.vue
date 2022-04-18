@@ -12,12 +12,12 @@ onMounted(() => {
       wrapAround: true,
       pageDots: false,
       prevNextButtons: false,
+      autoPlay: 5000,
     })
   })
 })
 const next = () => { flkty.next() }
 const previous = () => { flkty.previous() }
-setInterval(() => { next() }, 5000)
 
 </script>
 
