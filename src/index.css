@@ -3,3 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+  .orange-btn{
+    @apply bg-Orange text-white rounded-lg w-full py-3 px-4 flex justify-center
+  }
+}
