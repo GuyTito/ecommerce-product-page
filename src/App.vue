@@ -5,18 +5,11 @@ import PlusIcon from './components/icons/PlusIcon.vue';
 import MinusIcon from './components/icons/MinusIcon.vue';
 import CartIcon from './components/icons/CartIcon.vue';
 import { ref } from 'vue';
-import { computed } from '@vue/reactivity';
 import { useCartStore } from './stores/cart'
 import Cart from './components/Cart.vue'
 
 
 const quantity = ref(0)
-const c_quantity = computed(()=> {
-  if (quantity.value < 0) {
-    quantity.value = 0
-    return quantity.value
-  } else return quantity.value
-})
 
 const cart = useCartStore()
 const addToCart = () => {
@@ -50,17 +43,19 @@ const addToCart = () => {
         <span class="text-Grayish-blue line-through text-xs font-bold ml-auto">$250.00</span>
       </div>
   
-      <div class="bg-Light-grayish-blue rounded-lg text-Orange font-bold py-3 px-4 flex justify-between">
-        <button @click="quantity--"> <MinusIcon /> </button>
+      <form @submit.prevent="addToCart">
+        <div class="bg-Light-grayish-blue rounded-lg text-Orange font-bold py-3 px-4 flex justify-between">
+          <button type="button" @click="quantity--"> <MinusIcon /> </button>
 
-        <span class="text-Very-vark-blue"> {{ c_quantity }}</span>
-
-        <button @click="quantity++"> <PlusIcon /> </button>
-      </div>
-
-      <button @click="addToCart" class="orange-btn">
-        <CartIcon class="fill-white mr-4"/> Add to cart
-      </button>
+          <input v-model="quantity" type="number" min="0" class="text-Very-vark-blue font-bold text-center bg-Light-grayish-blue w-12 outline-none" />
+  
+          <button type="button" @click="quantity++"> <PlusIcon /> </button>
+        </div>
+  
+        <button type="submit" class="orange-btn mt-4">
+          <CartIcon class="fill-white mr-4"/> Add to cart
+        </button>
+      </form>
     </div>
 
     <Cart />
