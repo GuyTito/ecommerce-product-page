@@ -4,6 +4,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base{
+  /* Turn Off Number Input Spinners */
+  /* webkit browsers */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+
 @layer components{
   .orange-btn{
     @apply bg-Orange text-white rounded-lg w-full py-3 px-4 flex justify-center
