@@ -24,7 +24,7 @@ watchEffect(()=> {
   <Teleport to="body">
     <Transition>
       <div v-if="cart.is_open" @click="cart.is_open = false" class="fixed inset-0 w-full h-full items-start">
-        <div class="bg-white m-2 rounded-lg p-4 mt-16">
+        <div class="bg-white m-2 rounded-lg p-4 mt-16 md:mt-20 md:absolute md:w-80 md:right-6 shadow-2xl">
           <h2 class="text-Very-vark-blue font-bold">Cart</h2>
           
           <hr class="my-4">
