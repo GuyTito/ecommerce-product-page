@@ -34,7 +34,7 @@ watchEffect(()=> {
   
             <div class="ml-3">
               <div>Fall Limited Edition</div>
-              <div> $125.00 * {{ cart.item_quantity }} <span class="font-bold text-Very-vark-blue">${{ total }}</span></div>
+              <div> $125.00 * {{ cart.item_quantity }} <span class="font-bold text-Very-vark-blue">${{ total }}.00</span></div>
             </div>
   
             <button @click="cart.item_quantity = 0" class="ml-auto">
@@ -55,12 +55,10 @@ watchEffect(()=> {
 
 
 <style scoped>
-  .v-enter-active,
-  .v-leave-active {
+  .v-enter-active, .v-leave-active {
     transition: opacity 0.5s ease;
   }
-  .v-enter-from,
-  .v-leave-to {
+  .v-enter-from, .v-leave-to {
     opacity: 0;
   }
 </style>

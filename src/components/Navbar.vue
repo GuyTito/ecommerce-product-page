@@ -79,28 +79,14 @@ const cart = useCartStore()
   .v-leave-active {
     @apply transition-all duration-200 ease-in
   }
-  .v-enter-from,
-  .v-leave-to {
+  .v-enter-from, .v-leave-to {
     @apply -translate-x-full
   }
 
-
-  .overlay-enter-active {
-    @apply transition-all duration-300
+  .overlay-enter-active, .overlay-leave-active {
+    transition: opacity 0.5s ease;
   }
-  .overlay-leave-active {
-    @apply transition-all duration-200 ease-in delay-75
-  }
-  .overlay-enter-from{
-    @apply opacity-0
-  }
-  .overlay-enter-to {
-    @apply opacity-100
-  }
-  .overlay-leave-from{
-    @apply opacity-100
-  }
-  .overlay-leave-to {
-    @apply opacity-0
+  .overlay-enter-from, .overlay-leave-to {
+    opacity: 0;
   }
 </style>
