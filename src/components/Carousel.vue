@@ -30,14 +30,16 @@ const previous = () => { flkty.previous() }
       </div>
     </div>
 
-    <button @click="previous" class="left-2"> <PreviousIcon /> </button>
-    <button @click="next" class="right-2"> <NextIcon /> </button>
+    <button @click="previous" class="arrow-btn group left-2">
+      <PreviousIcon />
+    </button>
+    <button @click="next" class="arrow-btn group right-2">
+      <NextIcon />
+    </button>
   </div>
 </template>
 
 
 <style lang="postcss" scoped>
-  button{
-    @apply absolute top-1/2 bg-white py-3 px-4 rounded-full
-  }
+  
 </style>
