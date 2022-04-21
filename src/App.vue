@@ -6,7 +6,7 @@ import MinusIcon from './components/icons/MinusIcon.vue';
 import CartIcon from './components/icons/CartIcon.vue';
 import { ref } from 'vue';
 import { useCartStore } from './stores/cart'
-
+import Lightbox from './components/Lightbox.vue';
 
 const quantity = ref(0)
 
@@ -19,7 +19,10 @@ const addToCart = () => {
 const items = [1, 2, 3, 4]
 const current_photo = ref(1)
 
+const open_lightbox = ref(false)
+
 </script>
+
 
 <template>
   <Navbar />
@@ -29,7 +32,7 @@ const current_photo = ref(1)
 
     <div class="hidden md:block w-1/2">
       <div>
-        <img :src="`/assets/image-product-${current_photo}.jpg`" alt="product image" class="rounded-lg cursor-pointer">
+        <img @click="open_lightbox = true" :src="`/assets/image-product-${current_photo}.jpg`" alt="product image" class="rounded-lg cursor-pointer">
       </div>
 
       <div class="flex justify-between mt-8">
@@ -83,6 +86,13 @@ const current_photo = ref(1)
         </button>
       </form>
     </div>
+
+    <!-- lightbox modal -->
+    <Teleport to="body">
+      <Transition>
+        <Lightbox v-if="open_lightbox" @close="(data) => open_lightbox = data" />
+      </Transition>
+    </Teleport>
   </main>
 
   <footer class="mt-10 mb-2 text-center text-[10px] text-Dark-grayish-blue">
@@ -90,3 +100,13 @@ const current_photo = ref(1)
       Coded by <a href="https://github.com/GuyTito/ecommerce-product-page"  target="_blank" class="underline hover:font-bold">GuyTito</a>.
   </footer>
 </template>
+
+
+<style>
+.v-enter-active, .v-leave-active {
+  transition: opacity 0.5s ease;
+}
+.v-enter-from, .v-leave-to {
+  opacity: 0;
+}
+</style>
