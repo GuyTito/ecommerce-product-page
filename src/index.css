@@ -22,4 +22,7 @@
   .orange-btn{
     @apply bg-Orange text-white rounded-lg w-full py-3 px-4 flex justify-center
   }
+  .arrow-btn{
+    @apply absolute top-1/2 -translate-y-1/2 bg-white py-[9px] px-3 rounded-full
+  }
 }
