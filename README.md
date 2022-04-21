@@ -7,7 +7,7 @@ A simple and beautiful e-commerce product page. This is a solution to the [E-com
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  <!-- - [Screenshot](#screenshot) -->
+  - [Screenshot](#screenshot)
   <!-- - [Links](#links) -->
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -29,14 +29,14 @@ Users should be able to:
 - Add items to the cart
 - View the cart and remove items from it
 
-<!-- ### Screenshot
+### Screenshot
 
 <details>
 <summary>Screenshot</summary>
 
 ![Screenshot of project](./screenshot.png)
 
-</details> -->
+</details>
 
 <!-- ### Links
 
