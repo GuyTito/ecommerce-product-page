@@ -31,8 +31,12 @@ const open_lightbox = ref(false)
     <Carousel class="md:hidden" />
 
     <div class="hidden md:block w-1/2">
-      <div>
-        <img @click="open_lightbox = true" :src="`/assets/image-product-${current_photo}.jpg`" alt="product image" class="rounded-lg cursor-pointer">
+      <div class="flex relative h-[304px] w-full">
+        <template v-for="item in items" :key="item">
+          <Transition>
+            <img  v-if="current_photo == item" @click="open_lightbox = true" :src="`/assets/image-product-${item}.jpg`" alt="product image" class="rounded-lg cursor-pointer absolute">
+          </Transition>
+        </template>
       </div>
 
       <div class="flex justify-between mt-8">
