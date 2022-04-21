@@ -1,6 +1,6 @@
 # Frontend Mentor - E-commerce product page solution
 
-A simple and beautiful e-commerce product page. This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+A simple and beautiful e-commerce product page with a lightbox product gallery and cart functionality. This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 
 ## Table of contents
@@ -8,7 +8,7 @@ A simple and beautiful e-commerce product page. This is a solution to the [E-com
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  <!-- - [Links](#links) -->
+  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
@@ -38,10 +38,10 @@ Users should be able to:
 
 </details>
 
-<!-- ### Links
+### Links
 
-- [Solution]()
-- [Live Site]() -->
+- [Solution](https://www.frontendmentor.io/solutions/a-responsive-ecommerce-product-page-using-vue-3-BJNr5ZJBc)
+- [Live Site](https://product-page-fm.netlify.app/)
 
 ## My process
 
